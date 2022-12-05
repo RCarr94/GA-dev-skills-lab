@@ -4,3 +4,19 @@ $('#skills tbody').on('click','button', function(){
     })
 })
 
+
+$('#submit').on('click', function(evt){
+    if ($('input[name="trait"]').val() === '') return;
+
+    let tempS = $('input[name="trait"]').val();
+
+    let newRow = `<tr>
+                    <td><button class="btn remove">X</button></td>
+                        <td>${tempS}</td>  
+                    </tr>`
+    
+    $('#skills tbody').append(newRow);
+
+})
+
+
